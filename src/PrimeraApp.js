@@ -1,11 +1,21 @@
+import PropTypes from 'prop-types';
 
-const PrimeraApp = () => {
+const PrimeraApp = ({saludo, subtitulo}) => {
+
   return (
     <>
-      <h1> Hola mundo </h1>
-      <p>Mi primera app React</p>
+      <h1> {saludo}  </h1>
+      <p>{subtitulo}</p>
     </>
   );
 };
+
+PrimeraApp.propTypes = {
+  saludo: PropTypes.string.isRequired
+}
+
+PrimeraApp.defaultProps = {
+  subtitulo: 'Soy un subtitulo'
+}
 
 export default PrimeraApp;
